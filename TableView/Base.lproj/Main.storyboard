@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9jU-vg-NI3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="444.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="37" id="J53-wT-XWe">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J53-wT-XWe" id="bSX-fM-Y27">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.99900740389999998" green="0.62453913689999996" blue="0.03823110834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hi3-LY-Yo5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FLo-MU-Yso"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Hy8-SU-bAw">
+                                <rect key="frame" x="0.0" y="476" width="375" height="117"/>
+                                <subviews>
+                                    <textField opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new data" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-w2-Q1E">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wME-hY-ITq">
+                                        <rect key="frame" x="0.0" y="60" width="375" height="57"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RJZ-MG-Isv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hy8-SU-bAw" secondAttribute="trailing" id="2XO-rf-OeA"/>
+                            <constraint firstItem="9jU-vg-NI3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lkq-k5-IuO"/>
+                            <constraint firstItem="9jU-vg-NI3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OFy-Pd-zJG"/>
+                            <constraint firstItem="Hy8-SU-bAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dSU-11-bBg"/>
+                            <constraint firstItem="9jU-vg-NI3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" multiplier="0.5" id="kdu-QJ-9Hr"/>
+                            <constraint firstItem="Hy8-SU-bAw" firstAttribute="top" secondItem="9jU-vg-NI3" secondAttribute="bottom" constant="31.5" id="o7p-O2-ZI8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9jU-vg-NI3" secondAttribute="bottom" multiplier="1.5" id="shp-Tm-rGW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addText" destination="aeK-w2-Q1E" id="QdI-EC-eGR"/>
+                        <outlet property="tab" destination="9jU-vg-NI3" id="ocz-h0-aNw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+</document>
